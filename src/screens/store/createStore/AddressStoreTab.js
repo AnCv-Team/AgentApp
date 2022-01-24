@@ -16,7 +16,7 @@ const districts = {
   'Quảng Nam': ['QN1', 'QN2'],
 };
 
-const AddressStoreTab = () => {
+const AddressStoreTab = ({ navigation }) => {
   const handleChangedCity = () => {};
 
   const listInputSelect = [
@@ -43,7 +43,7 @@ const AddressStoreTab = () => {
   return (
     <View style={styles.area}>
       <ScrollView showsVerticalScrollIndicator={false} showsHorizontalScrollIndicator={false}>
-        <IndexTab index="2/2" />
+        <IndexTab label="2/2" title="Địa điểm và liên hệ" subtitle="Thông tin thêm cho cửa hàng của bạn" />
         <Text style={styles.txtLableGroup}>
           Vị trí cửa hàng <Text style={{ color: 'red' }}>*</Text>
         </Text>
@@ -91,7 +91,9 @@ const AddressStoreTab = () => {
         </FormGroup>
 
         <Button
-          pressed={null}
+          pressed={() => {
+            navigation.navigate('CreateSuccessStore');
+          }}
           children="Hòa thành"
           style={[styles.button, { backgroundColor: COLOR.SUCCESS, marginBottom: 20 }]}
         />

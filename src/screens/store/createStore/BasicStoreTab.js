@@ -11,7 +11,7 @@ const BasicStoreTab = ({ navigation }) => {
   return (
     <View style={styles.area}>
       <ScrollView showsVerticalScrollIndicator={false} showsHorizontalScrollIndicator={false}>
-        <IndexTab index="1/2" />
+        <IndexTab label="1/2" title="Thông tin cơ bản" subtitle="Thông tin mà khách hàng sẽ quan tâm" />
         <Text style={styles.txtLable}>
           Tên và mô tả <Text style={{ color: 'red' }}>*</Text>
         </Text>

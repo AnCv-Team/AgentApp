@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableHighlight } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 import { BORDER, SPACING, TEXT, COLOR } from '../../global/styles/index.style';
 
@@ -12,15 +12,14 @@ function SectionHome(props) {
       <View style={styles.optionList}>
         {options.map(option => (
           <View style={styles.optionArea} key={option.id}>
-            <TouchableHighlight
+            <TouchableOpacity
               onPress={() => navigation.navigate(option.navigator)}
-              style={[styles.option, { backgroundColor: bg ? bg : COLOR.LIGHT_YELLOW }]}
-              underlayColor="white">
+              style={[styles.option, { backgroundColor: bg ? bg : COLOR.LIGHT_YELLOW }]}>
               <View style={{ alignItems: 'center' }}>
                 <option.icon height={46} width={46} style={styles.optionIcon} />
                 <Text style={styles.optionText}>{option.title}</Text>
               </View>
-            </TouchableHighlight>
+            </TouchableOpacity>
           </View>
         ))}
       </View>

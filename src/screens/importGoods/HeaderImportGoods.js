@@ -8,8 +8,10 @@ import Icons from 'react-native-vector-icons/Ionicons';
 
 function HeaderImportGoods({ navigation }) {
   return (
-    <View style={styles.header}>
-      <HeaderBackButton navigation={navigation} />
+    <View style={styles.area}>
+      <View style={{ height: 50 }}>
+        <HeaderBackButton navigation={navigation} styleButton={{ left: 0 }} />
+      </View>
       <Text style={styles.title}>Nhập các mặt hàng có nguồn gốc rõ ràng!</Text>
       <View>
         <TextInput style={styles.inputText} placeholder="Tìm kiếm" />
@@ -24,9 +26,9 @@ function HeaderImportGoods({ navigation }) {
 export default HeaderImportGoods;
 
 const styles = StyleSheet.create({
-  header: {
+  area: {
     backgroundColor: COLOR.BLUE,
-    padding: SPACING.S5,
+    padding: SPACING.S4,
     paddingBottom: 100,
     borderBottomLeftRadius: BORDER.LARGER,
     borderBottomRightRadius: BORDER.LARGE,

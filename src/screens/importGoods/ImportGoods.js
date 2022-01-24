@@ -13,6 +13,7 @@ function ImportGoods(props) {
       <View>
         <ScrollView>
           <HeaderImportGoods navigation={navigation} />
+
           <View style={styles.list}>
             {options.map((item, index) => {
               return <ItemImportGoods key={index} item={item} navigation={navigation} />;
@@ -37,6 +38,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLOR.WHITE,
     flex: 1,
   },
+
   list: {
     marginTop: -50,
   },

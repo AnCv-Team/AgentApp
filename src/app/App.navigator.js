@@ -6,6 +6,7 @@ import HomeScreen from '../screens/home/HomeScreen';
 import ImportGoods from '../screens/importGoods/ImportGoods';
 import ImportGoodsProductsScreen from '../screens/importGoods/importGoodsProducts/ImportGoodsProductsScreen';
 import CreateStoreScreen from '../screens/store/createStore/CreateStoreScreen';
+import CreateSuccessStoreScreen from '../screens/store/createStore/CreateSuccessStoreScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +17,7 @@ const AppNavigator = () => {
       <Stack.Screen name="ImportGoods" component={ImportGoods} options={{ headerShown: false }} />
       <Stack.Screen name="ImportGoodsProducts" component={ImportGoodsProductsScreen} options={{ headerShown: false }} />
       <Stack.Screen name="Warehouse" component={CreateStoreScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="CreateSuccessStore" component={CreateSuccessStoreScreen} options={{ headerShown: false }} />
     </Stack.Navigator>
   );
 };
